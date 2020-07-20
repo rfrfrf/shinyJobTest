@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<linker>
+  <assembly fullname="Shiny.Core">
+    <namespace fullname="*" />
+  </assembly>
+  <assembly fullname="Shiny.Integrations.Sqlite">
+    <namespace fullname="*" />
+  </assembly>
+  <assembly fullname="Shiny.Notifications">
+    <namespace fullname="*" />
+  </assembly>
+</linker>

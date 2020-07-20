@@ -1,0 +1,75 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="AppState\LogPage.xaml.cs" />
+    <Compile Remove="AppState\LogViewModel.cs" />
+    <Compile Remove="Infrastructure\AbstractBindableBehavior.cs" />
+    <Compile Remove="Infrastructure\AbstractLogViewModel.cs" />
+    <Compile Remove="Infrastructure\CommandItem.cs" />
+    <Compile Remove="Infrastructure\DateTimeOffsetToDateTimeConverter.cs" />
+    <Compile Remove="Infrastructure\Dialogs.cs" />
+    <Compile Remove="Infrastructure\DoubleConverter.cs" />
+    <Compile Remove="Infrastructure\Extensions.cs" />
+    <Compile Remove="Infrastructure\ExtensionsPrism.cs" />
+    <Compile Remove="Infrastructure\GlobalExceptionHandler.cs" />
+    <Compile Remove="Infrastructure\Group.cs" />
+    <Compile Remove="Infrastructure\InverseBooleanConverter.cs" />
+    <Compile Remove="Infrastructure\ItemTappedCommandBehavior.cs" />
+    <Compile Remove="Infrastructure\ViewModel.cs" />
+    <Compile Remove="Jobs\CreatePage.xaml.cs" />
+    <Compile Remove="Jobs\CreateViewModel.cs" />
+    <Compile Remove="Jobs\ListPage.xaml.cs" />
+    <Compile Remove="Jobs\ListViewModel.cs" />
+    <Compile Remove="Jobs\LogPage.xaml.cs" />
+    <Compile Remove="Jobs\LogViewModel.cs" />
+    <Compile Remove="Jobs\MainPage.xaml.cs" />
+    <Compile Remove="ViewModels\ItemDetailViewModel.cs" />
+    <Compile Remove="ViewModels\ItemsViewModel.cs" />
+    <Compile Remove="Views\ItemDetailPage.xaml.cs" />
+    <Compile Remove="Views\ItemsPage.xaml.cs" />
+    <Compile Remove="Views\NewItemPage.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="AppState\LogPage.xaml" />
+    <EmbeddedResource Remove="Jobs\CreatePage.xaml" />
+    <EmbeddedResource Remove="Jobs\ListPage.xaml" />
+    <EmbeddedResource Remove="Jobs\LogPage.xaml" />
+    <EmbeddedResource Remove="Jobs\MainPage.xaml" />
+    <EmbeddedResource Remove="Views\ItemDetailPage.xaml" />
+    <EmbeddedResource Remove="Views\ItemsPage.xaml" />
+    <EmbeddedResource Remove="Views\NewItemPage.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Shiny.Core" Version="1.2.0.1755" />
+    <PackageReference Include="Shiny.Notifications" Version="1.2.0.1755" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.495" />  
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Jobs\" />
+    <Folder Include="AppState\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
